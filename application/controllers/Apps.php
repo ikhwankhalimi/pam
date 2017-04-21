@@ -271,6 +271,7 @@ class Apps extends CI_Controller {
 			$denda = $this->input->post('denda');
 			$adm  = $this->input->post('biaya_admin');
 			$bayar_angsuran = $this->input->post("angsuran");
+			$totangsuran = $this->input->post("totangsuran");
 
 			$params = array(
 								"id_pembayaran" => $id_pembayaran,
@@ -298,9 +299,9 @@ class Apps extends CI_Controller {
 				$data['pesan'] = '<div class="alert alert-danger">
 									<i class="fa fa-info-circle"></i> Stand Akhir harus lebih besar dari stand awal!
 								</div>';
-			}elseif($bayar_angsuran > 400000){
+			}elseif($bayar_angsuran > $totangsuran){
 				$data['pesan'] = '<div class="alert alert-danger">
-									<i class="fa fa-info-circle"></i> Angsuran tidak boleh lebih dari Rp. 400000!
+									<i class="fa fa-info-circle"></i> Jumlah Angsuran tidak boleh lebih dari Total Kekurangan Angsuran!
 								</div>';
 			}else{
 
