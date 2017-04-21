@@ -298,6 +298,10 @@ class Apps extends CI_Controller {
 				$data['pesan'] = '<div class="alert alert-danger">
 									<i class="fa fa-info-circle"></i> Stand Akhir harus lebih besar dari stand awal!
 								</div>';
+			}elseif($bayar_angsuran > 400000){
+				$data['pesan'] = '<div class="alert alert-danger">
+									<i class="fa fa-info-circle"></i> Angsuran tidak boleh lebih dari Rp. 400000!
+								</div>';
 			}else{
 
 			$this->m_apps->insert_data('pembayaran', $params);
