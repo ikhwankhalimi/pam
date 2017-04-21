@@ -1,0 +1,477 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"return"
+			],
+			[
+				"rslt",
+				"rslt"
+			],
+			[
+				"int",
+				"intval"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"rec",
+				"record"
+			],
+			[
+				"or",
+				"order"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"bula",
+				"bulan_max"
+			],
+			[
+				"mysql_s",
+				"mysql_select_db"
+			],
+			[
+				"my",
+				"mysql_connect"
+			],
+			[
+				"to",
+				"total_bayar"
+			],
+			[
+				"rule",
+				"pendaftaran_rule"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"publi",
+				"public"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"pel",
+				"pelanggan"
+			],
+			[
+				"b",
+				"bootstrap"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/pamsimas/readme.rst",
+		"/C/xampp/htdocs/pamsimas/README.md",
+		"/C/xampp/htdocs/pamsimas/pamsimas_221216.sql",
+		"/C/xampp/htdocs/pamsimas/license.txt",
+		"/C/xampp/htdocs/pamsimas/index.php",
+		"/C/xampp/htdocs/pamsimas/contributing.md",
+		"/C/xampp/htdocs/pamsimas/composer.json",
+		"/C/xampp/htdocs/latihan_ci/system/core/CodeIgniter.php",
+		"/C/xampp/htdocs/pamsimas/system/core/CodeIgniter.php",
+		"/G/backup program/luqman/sipilta/koneksi.php",
+		"/C/xampp/htdocs/pam/application/views/apps/pembayaran/view_pembayaran.php",
+		"/C/xampp/htdocs/pam/application/views/apps/pembayaran/pembayaran_sukses.php",
+		"/D/KULIAH D3/download-crud-1-1/application/config/database.php",
+		"/H/TUGAS UAS PEMROGRAMAN WEB/Maimun_Fadli_Romadhon/pamsimas/application/views/apps/pembayaran/pembayaran_sukses.php",
+		"/C/xampp/htdocs/pam/application/views/apps/pembayaran/input_pembayaran.php",
+		"/C/xampp/htdocs/pendataan_warga/pages/galeri/create.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/user/tambah.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/pembayaran/cetak_kwitansi.php",
+		"/C/xampp/htdocs/pamsimas/application/models/M_apps.php",
+		"/C/xampp/htdocs/pam/application/config/config.php",
+		"/C/xampp/htdocs/pam/application/config/database.php",
+		"/D/Bahan/Project Pamsimas/Revisi 4/pam/application/models/M_apps.php",
+		"/D/Kerjaan/fadli/pamsimas/application/models/M_apps.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/pembayaran/view_pembayaran.php",
+		"/C/xampp/htdocs/pam/application/models/M_apps.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/home.php",
+		"/D/Bahan/Project Pamsimas/Revisi 3/FADLI_PROJECT/pam/application/views/apps/pembayaran/input_pembayaran.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/pembayaran/input_pembayaran.php",
+		"/C/xampp/htdocs/pamsimas/application/views/login_view.php",
+		"/C/xampp/htdocs/siprakerin/index.php",
+		"/C/xampp/htdocs/siprakerin/home.php",
+		"/C/xampp/htdocs/pamsimas/application/views/template.php",
+		"/D/Kerjaan/fadli/pamsimas/application/views/login_view.php",
+		"/C/xampp/htdocs/sita/adm/koneksi.php",
+		"/C/xampp/htdocs/rpl/siprakerin/koneksi.php",
+		"/C/xampp/htdocs/prakerin-smk-master/index.php",
+		"/C/xampp/htdocs/rpl/siprakerin/home.php",
+		"/C/xampp/htdocs/ta/pamsimas/application/views/template.php",
+		"/C/xampp/htdocs/ta/pamsimas/application/views/login_view.php",
+		"/D/Kerjaan/fadli/pamsimas/application/views/template.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/template/sidebar.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/template/header.php",
+		"/C/xampp/htdocs/assets/pamsimas/application/models/M_apps.php",
+		"/C/xampp/htdocs/SIAbSi/koneksi.php",
+		"/C/xampp/htdocs/ta/siprakerin/view/daftarprakerin.php",
+		"/C/xampp/htdocs/ta/siprakerin/koneksi.php",
+		"/C/xampp/htdocs/ta/siprakerin/home.php",
+		"/C/xampp/htdocs/ta/siprakerin/view/mst_siswa.php",
+		"/C/xampp/htdocs/ta/siprakerin/view/laporan/dataprakerin/dataprakerin.php",
+		"/C/xampp/htdocs/ta/siprakerin/view/laporan/datanilaiprakerin/datanilaiprakerin.php",
+		"/C/xampp/htdocs/pamsimas/application/controllers/Apps.php",
+		"/E/HACK/htdocs/pamsimas/index.php",
+		"/D/Bahan/Project Pamsimas/Revisi 4/pam/application/controllers/Apps.php",
+		"/D/Bahan/Project Pamsimas/Revisi 3/FADLI_PROJECT/pamsimas/application/views/apps/pembayaran/input_pembayaran.php",
+		"/C/xampp/htdocs/pamsimas/application/config/config.php",
+		"/C/xampp/htdocs/pamsimas/application/config/database.php",
+		"/D/Bahan/Project Pamsimas/Revisi 4/pam/application/views/apps/pembayaran/input_pembayaran.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/pembayaran/index.php",
+		"/C/xampp/htdocs/pamsimas/application/helpers/tgl_helperr.php",
+		"/C/xampp/htdocs/pamsimas/application/config/autoload.php",
+		"/C/xampp/htdocs/pamsimas/application/config/foreign_chars.php",
+		"/C/xampp/htdocs/pamsimas/application/helpers/dompdf/load_font.php",
+		"/C/xampp/htdocs/pamsimas/application/config/doctypes.php",
+		"/C/xampp/htdocs/pamsimas/application/config/user_agents.php",
+		"/C/xampp/htdocs/pamsimas/application/config/routes.php",
+		"/C/xampp/htdocs/pamsimas/application/helpers/tgl_helper.php",
+		"/C/xampp/htdocs/pamsimas/application/helpers/dompdf_helper.php",
+		"/C/xampp/htdocs/pamsimas/application/helpers/dompdf/index.php",
+		"/C/xampp/htdocs/pamsimas/system/helpers/date_helper.php",
+		"/C/xampp/htdocs/pamsimas/application/models/M_user.php",
+		"/D/Bahan/Project Pamsimas/Revisi 3/FADLI_PROJECT/pamsimas/application/views/apps/pembayaran/index.php",
+		"/H/TUGAS UAS PEMROGRAMAN WEB/Maimun_Fadli_Romadhon/pamsimas/application/views/apps/pembayaran/input_pembayaran.php",
+		"/C/xampp/htdocs/projectku/config/conn.php",
+		"/E/EaseUS Data Recovery Wizard Technician 10.8.0.kuyhAa/backup.php",
+		"/G/TUGAS UAS PEMROGRAMAN WEB/Maimun_Fadli_Romadhon/pamsimas/application/config/database.php",
+		"/G/TUGAS UAS PEMROGRAMAN WEB/Maimun_Fadli_Romadhon/pamsimas/application/config/config.php",
+		"/C/xampp/htdocs/pam/application/views/apps/template/sidebar.php",
+		"/E/HACK/Admin/backup.php",
+		"/D/Bahan/Project Pamsimas/Revisi 3/FADLI_PROJECT/pamsimas/application/views/apps/template/sidebar.php",
+		"/G/Dian_Indah_P/nirmala/config/koneksi.php",
+		"/C/xampp/htdocs/pamsimas/utililitas/index.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/backup.php",
+		"/G/Dian_Indah_P/nirmala/pages/kendaraan/lihat_kendaraan.php",
+		"/G/Dian_Indah_P/nirmala/pages/aksi.php",
+		"/G/Dian_Indah_P/nirmala/index.php",
+		"/G/Dian_Indah_P/nirmala/pages/konten.php",
+		"/G/Dian_Indah_P/nirmala/pages/download.php",
+		"/H/pamsimas/application/config/database.php",
+		"/H/pamsimas/application/config/config.php",
+		"/C/xampp/htdocs/pamsimas/application/views/backup.php",
+		"/E/backup.php",
+		"/C/xampp/htdocs/SIAbSi/admin/absen/laporan/banre.php",
+		"/D/Bahan/apps web/app-percetakan-master/app-percetakan/application/views/flat-dot/restore/bg_home.php",
+		"/C/xampp/htdocs/faktur/application/views/restore/bg_home.php",
+		"/C/xampp/htdocs/faktur/application/config/routes.php",
+		"/C/xampp/htdocs/pamsimas/application/views/koneksi.php",
+		"/C/xampp/htdocs/pamsimas/application/views/download.php",
+		"/C/xampp/htdocs/faktur/application/controllers/backup.php",
+		"/C/xampp/htdocs/SIAbSi/admin/absen/laporan/backup.php",
+		"/C/xampp/htdocs/pendataan-warga-master/pages/galeri/_partials/menu.php",
+		"/C/xampp/htdocs/app-percetakan/application/views/flat-dot/login/login.php",
+		"/C/xampp/htdocs/app-percetakan/application/modules/dashboard/controllers/restore.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/restore.php",
+		"/C/xampp/htdocs/app-percetakan/application/modules/login/controllers/login.php",
+		"/C/xampp/htdocs/app-percetakan/application/modules/dashboard/controllers/backup.php",
+		"/C/xampp/htdocs/app-percetakan/application/models/app_load_config_model.php",
+		"/C/xampp/htdocs/app-percetakan/application/models/app_load_data_model.php",
+		"/C/xampp/htdocs/index.php",
+		"/C/xampp/htdocs/app-percetakan/application/controllers/welcome.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/restore/index.php",
+		"/C/xampp/htdocs/app-percetakan/application/views/flat-dot/restore/bg_home.php",
+		"/C/xampp/htdocs/pamsimas/application/views/restore.php",
+		"/C/Users/Fadli Milanisti/Downloads/codeigniter-db-backup.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/user/index.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/pelanggan/index.php",
+		"/C/xampp/htdocs/pamsimas/application/controllers/backup.php",
+		"/C/xampp/htdocs/pamsimas/application/views/apps/laporan/laporan_pelanggan.php",
+		"/C/xampp/htdocs/absensi/application/config/database.php",
+		"/C/xampp/htdocs/pam/application/views/apps/laporan/index.php",
+		"/C/xampp/htdocs/aceadmin/html/index.php",
+		"/C/xampp/htdocs/asamurat/application/views/admin/aaa.php",
+		"/C/xampp/htdocs/app-percetakan/application/views/flat-dot/bg_header.php",
+		"/C/xampp/htdocs/asamurat/application/views/admin/d_amain.php",
+		"/C/xampp/htdocs/pamsimas/application/views/img_view.php",
+		"/C/xampp/htdocs/app-percetakan/application/views/flat-dot/bg_left.php",
+		"/C/xampp/htdocs/app-percetakan/application/views/flat-dot/bg_home.php",
+		"/C/xampp/htdocs/app-percetakan/application/views/flat-dot/bg_footer.php",
+		"/C/xampp/htdocs/app-percetakan/application/helpers/dompdf/lib/php-font-lib/classes/Font_EOT_Header.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"detail",
+			"au",
+			"icon",
+			"IT",
+			"icon",
+			"base",
+			"au",
+			"<div class=\"modal fade bs-example-modal-lg\" id=\"portlet-config\"  role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">",
+			"siswa",
+			"ini",
+			"au",
+			"in",
+			"str_",
+			"str",
+			"1329",
+			"date",
+			"cek",
+			"pembayaran",
+			"b_max",
+			"input",
+			"if",
+			"cek_denda",
+			"3000",
+			"desember",
+			"12",
+			"tgl",
+			"2016",
+			"inp",
+			"3000",
+			"laporan",
+			"backup",
+			"Six",
+			"Four",
+			"lapora",
+			"l",
+			"utility",
+			"widgets",
+			"wid",
+			"wig",
+			"UI",
+			"UI & ELEMENT",
+			"UI ELEMENT",
+			"ELEMENT",
+			"ui",
+			"fa",
+			"util",
+			"AKUN",
+			"user",
+			"alamat",
+			"dinas",
+			"PETUGAS",
+			"Luqman Hadi Amirudin @Amik YMI TEGAL",
+			"1",
+			"no",
+			"dinas",
+			"3000",
+			"denda",
+			"3000",
+			"denda",
+			"3",
+			"3000",
+			"20",
+			"19",
+			"denda",
+			"20",
+			"denda",
+			"TGL",
+			"onclick",
+			"onclic",
+			"onclik",
+			"oncli",
+			"cetak",
+			"kembalian",
+			"print",
+			"cetak",
+			"5",
+			"min",
+			"cetak",
+			"log",
+			"model",
+			"Apps",
+			"stts",
+			"backup",
+			"stand_akhir",
+			"id_user",
+			"5",
+			"minimal",
+			"min",
+			"stand",
+			"db",
+			"md5",
+			"md",
+			"md5",
+			"db",
+			"md5",
+			"get",
+			"tanggal tran",
+			"REKEN",
+			"sipil",
+			"hapus",
+			"ho",
+			"home",
+			"pam",
+			"pams",
+			"home",
+			"user",
+			"white",
+			"bac",
+			"background",
+			"bac",
+			"home",
+			"css",
+			"konten disini "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\xampp\\htdocs\\pamsimas\\application\\views\\template.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
