@@ -253,14 +253,18 @@ class Apps extends CI_Controller {
 		$data['data_rekening'] = $this->m_apps->daftar_rekening(array('no_rekening' => $id, 'bulan_max' => $id));
 		$data['id'] = $this->m_apps->auto_number('pembayaran', 'id_pembayaran', 3, date('dmy'));
 
+		//var initial
+			$data['pesan'] = '';
 		$this->pembayaran_rule();
 
 		if ($this->form_validation->run() == TRUE) {
 			
-			//var initial
+			
 			$id_pembayaran = $this->input->post('id_pembayaran');
 			$no_rekening  = $this->input->post('no_rekening');
 			$pemakaian = $this->input->post('pemakaian');
+			$stand_awal  = $this->input->post('stand_awal');
+			$stand_akhir = $this->input->post('stand_akhir');
 			$bulan = $this->input->post('bulan');
 			$tahun = date('Y');
 			$tgl_bayar = date('Y-m-d');
@@ -281,6 +285,20 @@ class Apps extends CI_Controller {
 								"tagihan_air" => $this->input->post('jumlah_bayar'),
 								"id_user" => $this->session->userdata('id_user') 
 							);
+			$checkdata = $this->db->query("SELECT bulan FROM pembayaran
+                           WHERE bulan ='$bulan' AND tahun = '$tahun' limit 1");
+			
+			
+
+			if($checkdata->num_rows() > 0){
+				$data['pesan'] = '<div class="alert alert-danger">
+									<i class="fa fa-info-circle"></i> Pelanggan sudah bayar di bulan ini!
+								</div>';
+			}elseif($stand_akhir < $stand_awal){
+				$data['pesan'] = '<div class="alert alert-danger">
+									<i class="fa fa-info-circle"></i> Stand Akhir harus lebih besar dari stand awal!
+								</div>';
+			}else{
 
 			$this->m_apps->insert_data('pembayaran', $params);
 
@@ -301,9 +319,9 @@ class Apps extends CI_Controller {
 			$this->m_apps->insert_data('stand', $rec);
 
 			redirect('pembayaran_sukses/'.$id_pembayaran."/".$no_rekening."/".$bulan."-".$tahun, 'refresh');
+			}
 
-
-		} 
+		}
 		// show time
 		$this->template->display('apps/pembayaran/input_pembayaran', $data);
 	}

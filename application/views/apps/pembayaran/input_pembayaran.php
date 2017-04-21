@@ -1,5 +1,7 @@
 <div class="error">
+	
 	<?php  
+		echo $pesan;
 		echo form_error('stand_akhir');
 		echo form_error('bulan');
 	?>

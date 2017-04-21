@@ -13,6 +13,7 @@
 					<th>No Transaksi</th>
 					<th>No Rekening</th>
 					<th>Nama</th>
+					<th>Bulan/Tahun</th>
 					<th>Tanggal Transaksi</th>
 					<th>#</th>
 				</tr>
@@ -23,6 +24,7 @@
 						<td><?php echo $row->id_pembayaran ?></td>
 						<td><?php echo $row->no_rekening ?></td>
 						<td><?php echo $row->nama ?></td>
+						<td><?php echo show_month($row->bulan);echo " / "; echo $row->tahun ?></td>
 						<td><?php echo $row->tgl_pembayaran ?></td>
 
 						<td>
