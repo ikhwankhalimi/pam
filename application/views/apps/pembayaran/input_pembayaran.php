@@ -60,10 +60,11 @@
 			</div>
 			<div class="form-group">
 				Isi form dibawah, jika Pelanggan ingin membayar angsuran.
-				<br>Sisa Angsuran : Rp. <?php echo number_format($data_rekening['angsuran']) ?>
-				<input type="hidden" class="form-control" name="totangusran" value="<?php echo $data_rekening['angsuran'] ?>" readonly>
+				<br>Sisa Angsuran : Rp. <?php echo number_format($data_rekening['angsuran']) ?>				
 				<p class="d">
-				<input type="text" class="form-control angsuran" name="angsuran" value="0" placeholder="Masukan berapa angsuran yang dibayar" <?php if($data_rekening['angsuran'] == 0) { echo "readonly"; } ?>/>
+				<input type="text" class="form-control angsuran" name="angsuran" value="0" placeholder="Masukan berapa angsuran yang 
+				dibayar" <?php if($data_rekening['angsuran'] == 0) { echo "readonly"; } ?>/>
+				<input type="hidden" class="form-control" name="totangsuran" value="<?php echo $data_rekening['angsuran'] ?>">
 
 				</p>
 			</div>

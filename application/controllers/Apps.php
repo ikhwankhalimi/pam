@@ -250,7 +250,7 @@ class Apps extends CI_Controller {
 	{
 		$data['title'] = "Input Pembayaran";
 		$id = $this->uri->segment(2);
-		$data['data_rekening'] = $this->m_apps->daftar_rekening(array('no_rekening' => $id, 'bulan_max' => $id));
+		$data['data_rekening'] = $this->m_apps->daftar_rekening(array('no_rekening' => $id));
 		$data['id'] = $this->m_apps->auto_number('pembayaran', 'id_pembayaran', 3, date('dmy'));
 
 		//var initial
@@ -287,7 +287,7 @@ class Apps extends CI_Controller {
 								"id_user" => $this->session->userdata('id_user') 
 							);
 			$checkdata = $this->db->query("SELECT bulan FROM pembayaran
-                           WHERE bulan ='$bulan' AND tahun = '$tahun' limit 1");
+                           WHERE bulan ='$bulan' AND tahun = '$tahun' AND no_rekening='no_rekening' limit 1");
 			
 			
 
@@ -301,7 +301,7 @@ class Apps extends CI_Controller {
 								</div>';
 			}elseif($bayar_angsuran > $totangsuran){
 				$data['pesan'] = '<div class="alert alert-danger">
-									<i class="fa fa-info-circle"></i> Jumlah Angsuran tidak boleh lebih dari Total Kekurangan Angsuran!
+									<i class="fa fa-info-circle"></i> Oups, Jumlah Bayar Angsuran anda melebihi total kekurangan angsuran!$totangsuran$bayar_angsuran
 								</div>';
 			}else{
 

@@ -18,6 +18,7 @@ class M_apps extends CI_Model {
 		$this->db->join('registrasi', 'registrasi.no_pelanggan = pelanggan.no_pelanggan');
 		$this->db->join('golongan', 'golongan.id_gol = pelanggan.id_golongan');
 		$this->db->join('stand', 'stand.no_rekening = registrasi.no_rekening');
+		$this->db->order_by('stand.id','DESC');
 
 		if (isset($params['bulan_max'])) 
 		{
