@@ -156,7 +156,7 @@ class M_apps extends CI_Model {
 
 	}
 
-	public function list_pembayaran($params = array())
+	public function list_pembayaranold($params = array())
 	{
 		if (isset($params['id_pembayaran'])) 
 		{
@@ -186,11 +186,20 @@ class M_apps extends CI_Model {
 		$this->db->select("pembayaran.no_rekening, id_pembayaran, pelanggan.nama AS nama_pelanggan, pelanggan.alamat, pembayaran.no_rekening, pembayaran.bulan, pembayaran.tahun, pembayaran.pemakaian, golongan.nama_gol, golongan.tarif, stand.stand_awal, stand.stand_akhir, pembayaran.bayar_angsuran, registrasi.angsuran, pembayaran.adm, pembayaran.denda, tagihan_air, (tagihan_air + pembayaran.adm + pembayaran.denda + pembayaran.bayar_angsuran) AS total_tagihan, user.nama, pembayaran.tgl_pembayaran"); 
 
 		
-		$this->db->join('registrasi', 'registrasi.no_rekening = pembayaran.no_rekening');
+		/*$this->db->join('registrasi', 'registrasi.no_rekening = pembayaran.no_rekening');
 		$this->db->join('pelanggan', 'pelanggan.no_pelanggan = registrasi.no_pelanggan');
 		$this->db->join('golongan', 'golongan.id_gol = pelanggan.id_golongan');
 		$this->db->join('stand', 'stand.no_rekening = registrasi.no_rekening');
 		$this->db->join('user', 'user.id_user = pembayaran.id_user');
+		*/
+		$this->db->join('pembayaran', 'pembayaran.no_rekening=pelanggan.no_pelanggan');
+$this->db->join('golongan', 'golongan.id_gol=pelanggan.id_golongan');
+$this->db->join('stand', 'stand.no_rekening=pembayaran.no_rekening');
+$this->db->join('stand', 'stand.no_rekening=pelanggan.no_pelanggan');
+$this->db->join('pembayaran', 'pembayaran.bulan=stand.bulan');
+$this->db->join('pembayaran', 'pembayaran.tahun=stand.tahun');
+$this->db->join('registrasi', 'registrasi.no_pelanggan = pembayaran.no_rekening');
+$this->db->join('user', 'user.id_user = pembayaran.id_user');
 
 		if (isset($params['id_pembayaran'])) 
 		{
@@ -200,6 +209,11 @@ class M_apps extends CI_Model {
 		{
 			return $this->db->get('pembayaran')->result_array();
 		}
+	}
+
+	public function list_pembayaran($tgl1,$tgl2)
+	{
+		$this->db->query("SELECT pembayaran.no_rekening, id_pembayaran, pelanggan.nama AS nama_pelanggan, pelanggan.alamat, pembayaran.no_rekening, pembayaran.bulan, pembayaran.tahun, pembayaran.pemakaian, golongan.nama_gol, golongan.tarif, stand.stand_awal, stand.stand_akhir, pembayaran.bayar_angsuran, registrasi.angsuran, pembayaran.adm, pembayaran.denda, tagihan_air, (tagihan_air + pembayaran.adm + pembayaran.denda + pembayaran.bayar_angsuran) AS total_tagihan, user.nama, pembayaran.tgl_pembayaran FROM pembayaran,pelanggan,golongan,stand,user,registrasi WHERE pembayaran.no_rekening=pelanggan.no_pelanggan AND golongan.id_gol=pelanggan.id_golongan AND stand.no_rekening=pembayaran.no_rekening AND stand.no_rekening=pelanggan.no_pelanggan AND pembayaran.bulan=stand.bulan AND pembayaran.tahun=stand.tahun AND registrasi.no_pelanggan = pembayaran.no_rekening AND user.id_user = pembayaran.id_user AND pembayaran.tgl_pembayaran BETWEEN '$tgl1' AND '$tgl2'")->result_array();	
 	}
 }
 

@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="http://localhost/assets/datepicker/datepicker3.css">
-<script src="http://localhost/assets/datepicker/bootstrap-datepicker.js"></script>
+<link rel="stylesheet" href="<?php echo base_url();?>/assets/datepicker/datepicker3.css">
+<script src="<?php echo base_url();?>/assets/datepicker/bootstrap-datepicker.js"></script>
 
 <script>
 	$(function(){

@@ -495,7 +495,7 @@ class Apps extends CI_Controller {
 		$tgl1 = $this->input->post('tgl1');
 		$tgl2 = $this->input->post('tgl2');
 	
-		$q = $this->m_apps->list_pembayaran(array('tgl1' => $tgl1, 'tgl2' => $tgl2));
+		$q = $this->db->query("SELECT pembayaran.no_rekening, id_pembayaran, pelanggan.nama AS nama_pelanggan, pelanggan.alamat, pembayaran.no_rekening, pembayaran.bulan, pembayaran.tahun, pembayaran.pemakaian, golongan.nama_gol, golongan.tarif, stand.stand_awal, stand.stand_akhir, pembayaran.bayar_angsuran, registrasi.angsuran, pembayaran.adm, pembayaran.denda, tagihan_air, (tagihan_air + pembayaran.adm + pembayaran.denda + pembayaran.bayar_angsuran) AS total_tagihan, user.nama, pembayaran.tgl_pembayaran FROM pembayaran,pelanggan,golongan,stand,user,registrasi WHERE pembayaran.no_rekening=pelanggan.no_pelanggan AND golongan.id_gol=pelanggan.id_golongan AND stand.no_rekening=pembayaran.no_rekening AND stand.no_rekening=pelanggan.no_pelanggan AND pembayaran.bulan=stand.bulan AND pembayaran.tahun=stand.tahun AND registrasi.no_pelanggan = pembayaran.no_rekening AND user.id_user = pembayaran.id_user AND pembayaran.tgl_pembayaran BETWEEN '$tgl1' AND '$tgl2'")->result_array();
 
 		if (empty($q)) 
 		{
@@ -539,7 +539,7 @@ class Apps extends CI_Controller {
 		$tgl2 = $this->uri->segment(3);
 
 		$data['title'] = "Cetak Laporan Pembayaran";
-		$data['q'] = $this->m_apps->list_pembayaran(array('tgl1' => $tgl1, 'tgl2' => $tgl2));
+		$data['q'] = $this->db->query("SELECT pembayaran.no_rekening, id_pembayaran, pelanggan.nama AS nama_pelanggan, pelanggan.alamat, pembayaran.no_rekening, pembayaran.bulan, pembayaran.tahun, pembayaran.pemakaian, golongan.nama_gol, golongan.tarif, stand.stand_awal, stand.stand_akhir, pembayaran.bayar_angsuran, registrasi.angsuran, pembayaran.adm, pembayaran.denda, tagihan_air, (tagihan_air + pembayaran.adm + pembayaran.denda + pembayaran.bayar_angsuran) AS total_tagihan, user.nama, pembayaran.tgl_pembayaran FROM pembayaran,pelanggan,golongan,stand,user,registrasi WHERE pembayaran.no_rekening=pelanggan.no_pelanggan AND golongan.id_gol=pelanggan.id_golongan AND stand.no_rekening=pembayaran.no_rekening AND stand.no_rekening=pelanggan.no_pelanggan AND pembayaran.bulan=stand.bulan AND pembayaran.tahun=stand.tahun AND registrasi.no_pelanggan = pembayaran.no_rekening AND user.id_user = pembayaran.id_user AND pembayaran.tgl_pembayaran BETWEEN '$tgl1' AND '$tgl2'")->result_array();
 
 		$html = $this->load->view('apps/laporan/cetak_laporan_pembayaran', $data, TRUE);
 
