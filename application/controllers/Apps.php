@@ -287,7 +287,7 @@ class Apps extends CI_Controller {
 								"id_user" => $this->session->userdata('id_user') 
 							);
 			$checkdata = $this->db->query("SELECT bulan FROM pembayaran
-                           WHERE bulan ='$bulan' AND tahun = '$tahun' AND no_rekening='no_rekening' limit 1");
+                           WHERE bulan ='$bulan' AND tahun = '$tahun' AND no_rekening='$no_rekening' limit 1");
 			
 			
 
