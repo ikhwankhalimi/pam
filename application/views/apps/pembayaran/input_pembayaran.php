@@ -61,6 +61,12 @@
 			<div class="form-group">
 				Isi form dibawah, jika Pelanggan ingin membayar angsuran.
 				<br>Sisa Angsuran : Rp. <?php echo number_format($data_rekening['angsuran']) ?>				
+				<br><div class="alert alert-danger">
+									<i class="fa fa-info-circle"></i> Info <br>Tanggal Registrasi Anda : <?php $tanggalr=date('d-m-Y',strtotime($data_rekening['tgl_registrasi']));
+				echo $tanggalr; ?>
+				<br>Tanggal Jangka Waktu Angsuran : <?php $tanggal=date('d-m-Y',strtotime($data_rekening['tgl_registrasi']."+4 month"));
+				echo $tanggal; ?>	
+								</div>			
 				<p class="d">
 				<input type="text" class="form-control angsuran" name="angsuran" value="0" placeholder="Masukan berapa angsuran yang 
 				dibayar" <?php if($data_rekening['angsuran'] == 0) { echo "readonly"; } ?>/>

@@ -14,7 +14,7 @@ class M_apps extends CI_Model {
 			$this->db->where('registrasi.no_rekening', $params['no_rekening']);
 		}
 
-		$this->db->select('registrasi.no_rekening, pelanggan.nama, pelanggan.alamat, pelanggan.telp, stand.stand_awal, stand.stand_akhir, stand.bulan, stand.tahun, golongan.nama_gol, golongan.tarif, registrasi.angsuran');
+		$this->db->select('registrasi.no_rekening,registrasi.tgl_registrasi, pelanggan.nama, pelanggan.alamat, pelanggan.telp, stand.stand_awal, stand.stand_akhir, stand.bulan, stand.tahun, golongan.nama_gol, golongan.tarif, registrasi.angsuran');
 		$this->db->join('registrasi', 'registrasi.no_pelanggan = pelanggan.no_pelanggan');
 		$this->db->join('golongan', 'golongan.id_gol = pelanggan.id_golongan');
 		$this->db->join('stand', 'stand.no_rekening = registrasi.no_rekening');
