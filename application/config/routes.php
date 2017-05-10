@@ -90,6 +90,7 @@ $route['input_pembayaran/(:any)'] = "apps/input_pembayaran";
 $route['cek_denda'] = "apps/cek_denda";
 $route['pembayaran_sukses/(:num)/(:num)/(:any)'] = "apps/pembayaran_sukses";
 $route['view_pembayaran/(:num)/(:num)/(:any)'] = "apps/view_pembayaran";
+$route['view_angsuran/(:num)'] = "apps/view_angsuran";
 $route['cetak_kwitansi/(:num)/(:num)/(:any)'] = "apps/cetak_kwitansi";
 
 //Laporan

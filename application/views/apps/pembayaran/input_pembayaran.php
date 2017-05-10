@@ -4,7 +4,20 @@
 		echo $pesan;
 		echo form_error('stand_akhir');
 		echo form_error('bulan');
+		if ($angsuranbayar->num_rows() > 0) {
+		$ang = $angsuranbayar->row();			
+		if ($ang->bayar_angsuran == 0) {			
 	?>
+	<br>
+
+	<div class="alert alert-danger">
+									<i class="fa fa-info-circle"></i> Informasi Tunggakan Angsuran! <br>
+				Pembayaran Angsuran Bulan lalu anda kosong (Rp. 0)
+				
+				<br>Anda harus membayar angsuran pada bulan ini, atau dapat melihat history angsuran selengkapnya
+				<a href="<?php echo site_url('view_angsuran/'.$data_rekening['no_rekening']) ?>" target="_blank">disini</a>
+								</div>
+	<?php }} ?>			
 </div>
 <h2 align="right">TOTAL BAYAR  : Rp. <span class="print_tot"></span></h2>
 <h4 align="right">JUMLAH UANG : Rp. <span class="print_uang"></span></h4>
@@ -60,13 +73,7 @@
 			</div>
 			<div class="form-group">
 				Isi form dibawah, jika Pelanggan ingin membayar angsuran.
-				<br>Sisa Angsuran : Rp. <?php echo number_format($data_rekening['angsuran']) ?>				
-				<br><div class="alert alert-danger">
-									<i class="fa fa-info-circle"></i> Info <br>Tanggal Registrasi Anda : <?php $tanggalr=date('d-m-Y',strtotime($data_rekening['tgl_registrasi']));
-				echo $tanggalr; ?>
-				<br>Tanggal Jangka Waktu Angsuran : <?php $tanggal=date('d-m-Y',strtotime($data_rekening['tgl_registrasi']."+4 month"));
-				echo $tanggal; ?>	
-								</div>			
+				<br>Sisa Angsuran : Rp. <?php echo number_format($data_rekening['angsuran']) ?>								
 				<p class="d">
 				<input type="text" class="form-control angsuran" name="angsuran" value="0" placeholder="Masukan berapa angsuran yang 
 				dibayar" <?php if($data_rekening['angsuran'] == 0) { echo "readonly"; } ?>/>

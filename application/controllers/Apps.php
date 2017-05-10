@@ -251,6 +251,7 @@ class Apps extends CI_Controller {
 		$data['title'] = "Input Pembayaran";
 		$id = $this->uri->segment(2);
 		$data['data_rekening'] = $this->m_apps->daftar_rekening(array('no_rekening' => $id));
+		$data['angsuranbayar'] = $this->db->query("SELECT bayar_angsuran FROM pembayaran WHERE no_rekening = '$id' ORDER BY bulan,tahun DESC");
 		$data['id'] = $this->m_apps->auto_number('pembayaran', 'id_pembayaran', 3, date('dmy'));
 
 		//var initial
@@ -371,6 +372,18 @@ class Apps extends CI_Controller {
 		$data['detail'] = $this->m_apps->detail_pembayaran(array('id_pembayaran' => $id_pembayaran, 'no_rekening' => $no_rekening, "bulan" => $period[0], "tahun" => $period[1]));
 
 		$this->template->display('apps/pembayaran/view_pembayaran', $data);
+	}
+
+	public function view_angsuran()
+	{
+		$data['title'] = "Detail Data Angsuran";
+
+		$no_rekening = $this->uri->segment(2);		
+
+		$data['detail'] = $this->db->query("SELECT pelanggan.*,pembayaran.* FROM pelanggan,pembayaran
+			WHERE pelanggan.no_pelanggan=pembayaran.no_rekening AND no_rekening='$no_rekening'")->result();
+
+		$this->template->display('apps/pembayaran/view_angsuran', $data);
 	}
 
 	public function pembayaran_rule()
