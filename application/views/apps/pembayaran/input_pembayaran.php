@@ -18,14 +18,48 @@
 				<a href="<?php echo site_url('view_angsuran/'.$data_rekening['no_rekening']) ?>" target="_blank">disini</a>
 								</div>
 	<?php }} ?>			
+	<?php
+	$bln = $data_rekening['bulan'];
+	$thn = $data_rekening['tahun'];
+	if (strlen($bln)==1) {
+		$bln = "0".$data_rekening['bulan'];
+	}
+
+	$lastdate = $thn."-".$bln."-01";
+	$skrg 	  = date("Y")."-".date("m")."-01";
+	$no_rek   = $data_rekening['no_rekening'];
+
+	$selisihbln = $this->db->query("SELECT TIMESTAMPDIFF(MONTH,'$lastdate','$skrg') AS selisih FROM Pembayaran WHERE no_rekening='$no_rek'")->row();
+	$getselisih = $selisihbln->selisih;
+	if($getselisih>0){
+	?>
+	<div class="alert alert-danger">
+				<i class="fa fa-info-circle"></i> Ada Informasi Tunggakan Pembayaran! <br>
+				<label class="alert-info">HISTORY BULAN TERAKHIR PEMBAYARAN ANDA YAITU: BULAN <?php echo show_month($data_rekening['bulan']);?><br></label>
+				
+				
+				<br>Anda harus membayar tagihan setelah bulan tersebut sebelum membayar pada bulan yang berjalan pada sistem ini!
+								</div>
+	<?php } ?>
 </div>
 <h2 align="right">TOTAL BAYAR  : Rp. <span class="print_tot"></span></h2>
 <h4 align="right">JUMLAH UANG : Rp. <span class="print_uang"></span></h4>
 <h4 align="right">KEMBALIAN : Rp. <span class="print_kembali"></span></h4>
-<div class="row">
+<div class="row"   vbv >
 	<div class="col-md-6 well well-sm">
 		<form action="" method="POST">
-			<input type="hidden" name="id_pembayaran" value="<?php echo $id ?>">
+			<?php
+			$sql=$this->db->query("SELECT * FROM pembayaran ORDER BY substr(id_pembayaran,7,3) DESC LIMIT 0,1")->row();
+ $kodeawal=substr($sql->id_pembayaran,6,3)+1;
+ if($kodeawal<10){
+  $kode=date('dmy').'00'.$kodeawal;
+ }elseif($kodeawal > 9 && $kodeawal <=99){
+  $kode=date('dmy').'0'.$kodeawal;
+ }else{
+  $kode=date('dmy').$kodeawal;
+ }
+ ?>
+			<input type="hidden" name="id_pembayaran" value="<?php echo $kode; ?>">
 			<div class="form-group">
 				<label for="" class="control-label">No Rekening : </label>
 				<input type="text" class="form-control" name="no_rekening" readonly="" value="<?php echo $data_rekening['no_rekening'] ?>">
